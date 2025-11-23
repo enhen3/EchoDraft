@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist-info/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Outputs
+output/*.md
+output/*.txt
+!output/.gitkeep
+
+# Models - too large for git
+models/whisper/small-int8/*.bin
+models/whisper/small-int8/*.onnx
+models/whisper/small-int8/tokenizer.json
+models/whisper/small-int8/vocabulary.txt
+!models/whisper/small-int8/.gitkeep
+
+# Test files
+test_*.wav
+test_*.mp3
+test_*.m4a
+
+# Distribution packages
+*.zip
+*.tar.gz
+*.dmg
+EchoTranscriber-分发版/
+test_unzip/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

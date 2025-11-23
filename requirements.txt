@@ -1,0 +1,2 @@
+faster-whisper>=1.0.0
+PyQt6>=6.7.0
