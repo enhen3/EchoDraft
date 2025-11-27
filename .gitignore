@@ -9,6 +9,7 @@ dist/
 *.spec
 dmg_temp/
 *.dmg
+*.dmg.sha256
 output/
 models/
 !models/.keep
