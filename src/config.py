@@ -9,7 +9,8 @@ def get_base_dir() -> Path:
     """
     if getattr(sys, "frozen", False):
         return Path(sys.executable).resolve().parent
-    return Path(__file__).resolve().parent
+    # Running from source in src/ directory, so project root is parent
+    return Path(__file__).resolve().parent.parent
 
 
 BASE_DIR = get_base_dir()

@@ -2,6 +2,11 @@
 
 set -euo pipefail
 
+# Ensure we are in the project root
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_ROOT="$(dirname "$DIR")"
+cd "$PROJECT_ROOT"
+
 echo "======================================"
 echo "创建 EchoDraft DMG 镜像文件"
 echo "======================================"
@@ -10,7 +15,7 @@ echo ""
 # 检查dist目录中的app是否存在
 if [ ! -d "dist/EchoDraft.app" ]; then
     echo "❌ 错误：dist/EchoDraft.app 不存在"
-    echo "请先运行 ./build_mac_app.sh 创建应用"
+    echo "请先运行 ./scripts/build_mac_app.sh 创建应用"
     exit 1
 fi
 
@@ -122,6 +127,7 @@ hdiutil convert "${TEMP_DMG}" -format UDZO -imagekey zlib-level=9 -o "${FINAL_DM
 echo "🧹 清理临时文件..."
 rm -f "${TEMP_DMG}"
 rm -rf dmg_temp
+rm -f "${TEMP_DMG}.sha256"
 
 echo "✅ 计算校验和..."
 shasum -a 256 "${FINAL_DMG}" | tee "${FINAL_DMG}.sha256"
