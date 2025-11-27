@@ -16,11 +16,18 @@
 
 ### 方法一：直接下载应用 (推荐)
 
-请前往 [Releases](https://github.com/enhen3/EchoDraft/releases) 页面下载最新的 `.dmg` 安装包。
+请前往 [Releases](https://github.com/enhen3/EchoDraft/releases) 页面下载最新的版本。
 
-1. 下载 `EchoDraft-macOS-v1.0.0.dmg`。
+**📥 下载说明：**
+在 Assets 列表中，你可能会看到多个文件：
+- ✅ **`EchoDraft-macOS-vX.X.X.dmg`**：**请下载这个文件**。这是 macOS 的安装程序，下载后即可直接使用。
+- ❌ `Source code (zip)` / `Source code (tar.gz)`：这是源代码，仅供开发者研究使用，普通用户**无需下载**。
+
+**📦 安装步骤：**
+1. 下载 `.dmg` 文件。
 2. 双击打开，将 `EchoDraft.app` 拖入应用程序文件夹。
-3. 开始使用！
+3. 首次打开时，如果提示安全警告，请在“系统设置” -> “隐私与安全性”中允许打开，或右键点击应用选择“打开”。
+4. 开始使用！
 
 ### 方法二：从源码运行
 
