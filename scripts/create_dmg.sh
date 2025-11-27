@@ -24,7 +24,7 @@ echo ""
 
 # 设置变量
 APP_NAME="EchoDraft"
-VERSION="1.0.0"
+VERSION="1.0.1"
 DMG_NAME="${APP_NAME}-macOS-v${VERSION}"
 TEMP_DMG="temp.dmg"
 FINAL_DMG="${DMG_NAME}.dmg"

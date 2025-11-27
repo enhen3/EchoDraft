@@ -14,7 +14,20 @@ def get_base_dir() -> Path:
 
 
 BASE_DIR = get_base_dir()
-OUTPUT_DIR = BASE_DIR / "output"
+
+
+def get_default_output_dir() -> Path:
+    """
+    Determine the default output directory.
+    In app mode, use ~/Documents/EchoDraft to ensure write permissions.
+    In dev mode, use local output/ directory.
+    """
+    if getattr(sys, "frozen", False):
+        return Path.home() / "Documents" / "EchoDraft"
+    return BASE_DIR / "output"
+
+
+OUTPUT_DIR = get_default_output_dir()
 
 
 def get_models_root() -> Path:

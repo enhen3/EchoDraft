@@ -18,7 +18,7 @@ echo "Building macOS app bundle with PyInstaller..."
 FASTER_WHISPER_ASSETS=$(python3 -c "import faster_whisper; import os; print(os.path.join(os.path.dirname(faster_whisper.__file__), 'assets'))")
 
 # Add src to PYTHONPATH so imports work
-export PYTHONPATH="${PROJECT_ROOT}/src:$PYTHONPATH"
+export PYTHONPATH="${PROJECT_ROOT}/src:${PYTHONPATH:-}"
 
 python3 -m PyInstaller \
   --noconfirm \
