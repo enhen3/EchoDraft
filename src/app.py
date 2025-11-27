@@ -124,7 +124,9 @@ QProgressBar::chunk {{
 
 def save_transcript(audio_path: Path, transcript: str) -> Path:
     """
-    Write transcript to a markdown file under output/ and return its path.
+    Write transcript to a markdown file and return its path.
+    In app mode: saves to ~/Documents/EchoDraft/
+    In dev mode: saves to output/ directory.
     """
     output_dir = ensure_output_dir()
     base_name = audio_path.stem
